@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mainDiv{
+            display: grid;
+            background-color: aqua;
+            /* grid-template-columns: 50 px 50px;            defines only 2 columns of size 50px each*/
+            /*grid-template-columns: 100px 50px 50px;        defines 3 columns of size 100, 50, 50 */
+            /*grid-template-columns: repeat(3, 50px);        defines 3 equal columns of width 50px each*/
+            /*grid-template-columns: repeat(10, 1fr);        defines parent div into 10 equal sections */
+            grid-template-columns: repeat(3, 1fr);
+            width:300px;
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            /* gap: 20px 0;    defines row-gap is 20px and column-gap is 0; */
+
+            grid-template-areas: " rd gr pk"
+                                 " bl ye pr"; /* arrange the order in user's manner. Here, gray is not called but it will remain in div. */
+
+            @media screen and (min-width:200px) and (max-width:500px){
+                background-color: antiquewhite;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mainDiv" style="border: 1px solid black">
+        <div style="background-color: red; grid-area: rd;">1</div>
+        <div style="background-color: blue; grid-area: bl">2</div>
+        <div style="background-color: green; grid-area: gr">3</div>
+        <div style="background-color: yellow; grid-area: ye ">4</div>
+        <div style="background-color: pink; grid-area: pk">5</div>
+        <div style="background-color: purple; grid-area: pr">6</div>
+        <div style="background-color: gray; grid-area: gy">7</div>
+    </div>
+</body>
+</html>

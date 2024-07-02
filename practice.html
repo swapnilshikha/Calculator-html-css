@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div > h2 {   /* here '>' is a child selector */
+            color:blueviolet;
+        }
+
+        .abc > h3 {
+            color: rgb(240, 67, 96);
+        }
+    </style>
+</head>
+<body>
+    <!---This is a comment section -->
+
+    <div style="border: 1px solid red; display:flex">
+        <div style="border: 1px solid yellow">
+            <div style="border: 1px solid green">
+                <h1>H</h1>
+            </div>
+            <div style="border:1px solid palevioletred">
+                <h1>H</h1>
+            </div>
+        </div>
+
+        <div style="border: 1px solid blue">
+            <h1>H</h1>
+        </div>
+
+        <div style="border: 1px solid black">
+            <h1>H</h1>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <h2>Hello</h2>
+        </div>
+    </div>
+
+    <div class="abc">
+            <h3> Good Morning </h3>
+    </div>
+    
+
+</body>
+</html>
